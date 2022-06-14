@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import getWeb3 from "./getWeb3";
 
 import "./App.css";
+import Home from "./components/home/Home";
 
 class App extends Component {
   state = { storageValue: 0, web3: null, accounts: null, contract: null };
@@ -49,6 +50,7 @@ class App extends Component {
   };
 
   render() {
+    <Home />
     if (!this.state.web3) {
       return <div>Loading Web3, accounts, and contract...</div>;
     }
