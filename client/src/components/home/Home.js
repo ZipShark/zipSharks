@@ -1,15 +1,16 @@
 import React from 'react';
+import "./Home.css";
 
 
 
 function Home() {
     return(
-        <>
-            <a href='/'>Home</a>
+        <div className='home-page'>
+            <a href='/' className='home-tag'><h1>Zip Sharks</h1></a>
         
         
         
-        </>
+        </div>
 
 
     ) 

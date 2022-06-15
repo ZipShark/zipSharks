@@ -1,4 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Calligraffitti&family=Permanent+Marker&display=swap');
+
+
 * {
     box-sizing: border-box;
 }
+.home-tag {
+    font-family: 'Permanent Marker', cursive;
 
+}
+
+.home-page {
+    display: flex;
+    align-items: center;
+    background-color: black;
+}
+
+.home-page a {
+    color: inherit;
+    color: beige;
+
+
+}

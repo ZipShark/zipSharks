@@ -9,7 +9,9 @@ import Home from "./components/home/Home";
 
 function App() {
   return (
-    <Home />
+    <div className="app-home">
+      <Home />
+    </div>
   )
 }
 // class App extends Component {
