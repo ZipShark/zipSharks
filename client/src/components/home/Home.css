@@ -12,12 +12,16 @@
 .home-page {
     display: flex;
     align-items: center;
+    justify-content: center;
     background-color: black;
+    height: 600px;
+    width: 100%;
 }
 
 .home-page a {
     color: inherit;
     color: beige;
+    text-decoration: none;
 
 
 }
