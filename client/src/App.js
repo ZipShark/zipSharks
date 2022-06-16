@@ -4,14 +4,18 @@ import React from "react";
 
 import "./App.css";
 import Home from "./components/home/Home";
+import LandingPage from "./components/landingPage/LandingPage";
 
 
+// <LandingPage />
 
 function App() {
   return (
-    <div className="app-home">
-      <Home />
-    </div>
+    <>
+      <div className="app-home">
+        <Home />
+      </div>
+    </>
   )
 }
 // class App extends Component {

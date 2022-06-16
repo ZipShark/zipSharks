@@ -4,7 +4,11 @@ import React from 'react';
 
 
 function LandingPage() {
-    return "Landing Page"
+    return (
+        <a href='/landing'>
+        "Landing Page"
+        </a>
+        )
 }
 
 
