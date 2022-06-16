@@ -1,13 +1,14 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 
 
 
 function LandingPage() {
     return (
-        <a href='/landing'>
+        <Link to='/landing'>
         "Landing Page"
-        </a>
+        </Link>
         )
 }
 

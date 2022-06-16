@@ -5,16 +5,20 @@ import React from "react";
 import "./App.css";
 import Home from "./components/home/Home";
 import LandingPage from "./components/landingPage/LandingPage";
-
+import { Route, Routes } from "react-router-dom";
 
 // <LandingPage />
+// <Home />
+// <div className="app-home">
+// </div>
 
 function App() {
   return (
     <>
-      <div className="app-home">
-        <Home />
-      </div>
+      <Routes>
+        <Route path="/landing" element={<Home />} />
+        <Route path="/" element={<LandingPage />} />
+      </Routes>
     </>
   )
 }

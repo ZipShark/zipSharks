@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import "./Home.css";
 
 
@@ -7,7 +8,7 @@ function Home() {
     return(
         <>
             <div className='home-page'>
-                <a href='/landing' className='home-tag'><h1>Zip Sharks</h1></a>
+                <Link to='/' className='home-tag'><h1>Zip Sharks</h1></Link>
             </div>
         </>
     ) 
