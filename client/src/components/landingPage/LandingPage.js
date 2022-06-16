@@ -1,14 +1,18 @@
 import React from 'react';
+// import LandingPageNav from './LandingPageNav';
 import { Link } from 'react-router-dom';
 
 
 
+// <LandingPageNav />
 
 function LandingPage() {
     return (
-        <Link to='/landing'>
-        "Landing Page"
-        </Link>
+        <div className='land-page'>
+            <Link to='/'>
+                "Landing Page"
+            </Link>
+        </div>
         )
 }
 
