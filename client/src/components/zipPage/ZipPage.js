@@ -1,10 +1,10 @@
 import React from "react";
-import "/LandingPageNav.css"
+// import "/ZipPage.css"
 
 
 
 
-function LandingPageNav() {
+function ZipPage() {
     return (
         <div className="landing-page-nav">
             "image here"
@@ -13,4 +13,4 @@ function LandingPageNav() {
 }
 
 
-export default LandingPageNav;
+export default ZipPage;
