@@ -1,0 +1,13 @@
+.zip-page{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 0;
+    color: brown;
+}
+
+.zip-logo{
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+}
