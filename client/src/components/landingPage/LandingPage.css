@@ -1,3 +1,20 @@
-* {
-    background-color: antiquewhite;
+/* * { */
+    /* background-color: #f8f8f8; */
+/* } */
+
+.land-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* width: 100px; */
+    /* background-color: rebeccapurple; */
+}
+
+.shark-background {
+    background-image: url("../../images/zip-shark.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* opacity: 0.5; */
+    height: 500px;
+    width: 100%;
 }

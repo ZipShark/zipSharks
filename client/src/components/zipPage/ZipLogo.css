@@ -2,8 +2,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    left: 0;
-    color: brown;
+    width: 100px;
+    /* left: 0; */
+    /* color: brown; */
 }
 
 .zip-logo{

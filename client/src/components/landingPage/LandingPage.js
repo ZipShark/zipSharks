@@ -1,6 +1,7 @@
 import React from 'react';
-import ZipPage from '../zipPage/ZipPage';
+import ZipLogo from '../zipPage/ZipLogo';
 import { Link } from 'react-router-dom';
+import "./LandingPage.css";
 
 
 
@@ -8,12 +9,15 @@ import { Link } from 'react-router-dom';
 function LandingPage() {
     return (
         <>
-        <ZipPage />
         <div className='land-page'>
-            <Link to='/'>
-                "Landing Page"
-            </Link>
+        <Link to='/'>
+        <ZipLogo />
+        </Link>
         </div>
+        <div className='shark-background'>
+        <h1>Zip Sharks</h1>
+            </div>
+
         </>
         )
 }
