@@ -1,0 +1,10 @@
+.zip-header {
+     font-family: 'Permanent Marker', cursive;
+     font-size: x-large;
+}
+
+.zip-header h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

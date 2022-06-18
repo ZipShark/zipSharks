@@ -1,6 +1,7 @@
 /* * { */
     /* background-color: #f8f8f8; */
 /* } */
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 
 .land-page {
     display: flex;
@@ -17,4 +18,5 @@
     /* opacity: 0.5; */
     height: 500px;
     width: 100%;
+     font-family: 'Permanent Marker', cursive;
 }

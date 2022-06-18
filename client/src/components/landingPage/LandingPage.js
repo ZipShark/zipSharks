@@ -2,6 +2,7 @@ import React from 'react';
 import ZipLogo from '../zipPage/ZipLogo';
 import { Link } from 'react-router-dom';
 import "./LandingPage.css";
+import ZipHeader from '../zipHeader/ZipHeader';
 
 
 
@@ -9,13 +10,13 @@ import "./LandingPage.css";
 function LandingPage() {
     return (
         <>
-        <div className='land-page'>
-        <Link to='/'>
-        <ZipLogo />
-        </Link>
-        </div>
-        <div className='shark-background'>
-        <h1>Zip Sharks</h1>
+            <div className='land-page'>
+                <Link to='/'>
+                    <ZipLogo />
+                </Link>
+            </div>
+            <ZipHeader />
+            <div className='shark-background'>
             </div>
 
         </>
