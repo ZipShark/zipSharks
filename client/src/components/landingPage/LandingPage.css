@@ -26,3 +26,8 @@
     height: 500px;
     width: 100%;
 }
+
+.background-shade h2 {
+    color: beige;
+    font-family: 'Permanent Marker', cursive;
+}
