@@ -8,7 +8,7 @@ function Home() {
     return(
         <>
             <div className='home-page'>
-                <Link to='/landing' className='home-tag'><h1>Zip Sharks</h1></Link>
+                <Link to='/landing' className='home-tag'><h1>ZipSharks</h1></Link>
             </div>
         </>
     ) 

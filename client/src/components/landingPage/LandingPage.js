@@ -1,6 +1,7 @@
 import React from 'react';
 import ZipLogo from '../zipPage/ZipLogo';
 import { Link } from 'react-router-dom';
+import About from '../about/About';
 import "./LandingPage.css";
 import ZipHeader from '../zipHeader/ZipHeader';
 
@@ -21,6 +22,7 @@ function LandingPage() {
                     <h2>Sharks don't hunt in packs...but everyone notices when sharks gather.</h2>
                 </div>
             </div>
+            <About />
 
         </>
         )
