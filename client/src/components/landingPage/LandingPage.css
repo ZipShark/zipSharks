@@ -20,3 +20,9 @@
     width: 100%;
      font-family: 'Permanent Marker', cursive;
 }
+
+.background-shade {
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 500px;
+    width: 100%;
+}

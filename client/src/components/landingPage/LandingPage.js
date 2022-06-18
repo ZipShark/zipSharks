@@ -17,6 +17,7 @@ function LandingPage() {
             </div>
             <ZipHeader />
             <div className='shark-background'>
+                <div className='background-shade'></div>
             </div>
 
         </>
