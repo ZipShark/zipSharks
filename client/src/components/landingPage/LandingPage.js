@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import About from '../about/About';
 import "./LandingPage.css";
 import ZipHeader from '../zipHeader/ZipHeader';
+import MintDetails from '../mintDetails/MintDetails';
 
 
 
@@ -23,6 +24,7 @@ function LandingPage() {
                 </div>
             </div>
             <About />
+            <MintDetails />
 
         </>
         )
