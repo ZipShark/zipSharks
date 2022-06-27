@@ -16,8 +16,12 @@ function Footer() {
                     ZipSharks Brought to byD3f
                 </h2>
             
-                <FontAwesomeIcon className="twitter-icon" icon={faTwitter} fa-xl></FontAwesomeIcon>
-                <FontAwesomeIcon className="discord-icon" icon={faDiscord}></FontAwesomeIcon>
+                <a href="">
+                    <FontAwesomeIcon className="twitter-icon" icon={faTwitter} fa-xl></FontAwesomeIcon>
+                </a>
+                <a href="">
+                    <FontAwesomeIcon className="discord-icon" icon={faDiscord}></FontAwesomeIcon>
+                </a>
             </div>
             
         </>

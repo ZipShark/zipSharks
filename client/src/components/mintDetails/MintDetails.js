@@ -28,8 +28,8 @@ function MintDetails() {
 
     return(
         <>
-            <button className="zip-button" onClick={connectWallet}>Connect Wallet</button>
-            <button className="zip-button" onClick={handleClick}>Mint</button>
+            <button className="connect-button" onClick={connectWallet}>Connect Wallet</button>
+            <button className="mint-button" onClick={handleClick}>Mint</button>
 
             <h2> Date: TBA</h2>
             <h2> Supply: 5555</h2>
