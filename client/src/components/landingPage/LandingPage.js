@@ -6,6 +6,7 @@ import "./LandingPage.css";
 import ZipHeader from '../zipHeader/ZipHeader';
 import Team from '../team/Team';
 import MintDetails from '../mintDetails/MintDetails';
+import Footer from '../footer/Footer';
 
 
 
@@ -25,6 +26,7 @@ function LandingPage() {
                     <About />
                     <Team />
                     <MintDetails />
+                    <Footer />
                 </div>
             </div>
         </>
