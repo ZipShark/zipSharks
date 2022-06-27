@@ -13,20 +13,22 @@ import MintDetails from '../mintDetails/MintDetails';
 function LandingPage() {
     return (
         <>
-            <div className='land-page'>
-                <Link to='/'>
-                    <ZipLogo />
-                </Link>
-            </div>
+            <div className='full-background'>
+                <div className='shark-background'>
+                    <div className='land-page'>
+                        <Link to='/'>
+                            <ZipLogo />
+                        </Link>
+                    </div>
             <ZipHeader />
-            <div className='shark-background'>
                 <div className='background-shade'>
                     <h2>Sharks don't hunt in packs...but everyone notices when sharks gather.</h2>
                 </div>
+                    <About />
+                    <Team />
+                    <MintDetails />
+                </div>
             </div>
-            <About />
-            <Team />
-            <MintDetails />
 
         </>
         )

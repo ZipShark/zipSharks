@@ -1,7 +1,8 @@
-import React from "react";
+import  React  from "react";
 
 
 function MintDetails() {
+    // const wallet = [walletAddress, setWalletAddre]
 
     function handleClick() {
         console.log("you clicked me!");
@@ -12,6 +13,13 @@ function MintDetails() {
             const accounts = await window.ethereum.request({ method: 'eth_accounts'});
 
             const chainId = await window.ethereum.request({ method: 'eth_chainId'});
+
+            if(chainId != '0x1') {
+                alert("Please connect to Mainnet");
+            } else {
+                let wallet = accounts[0];
+                // setWalletAddress(wallet);
+            }
 
         } else {
             alert("Please install MetaMask");

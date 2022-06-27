@@ -12,22 +12,32 @@
 }
 
 .shark-background {
-    background-image: url("../../images/zip-shark.png");
-    background-repeat: no-repeat;
-    background-size: cover;
+    /* background-image: url("../../images/blue-background.jpg"); */
+    /* background-repeat: no-repeat; */
+    /* background-size: cover; */
     /* opacity: 0.5; */
-    height: 500px;
-    width: 100%;
-     font-family: 'Permanent Marker', cursive;
+    /* height: 100%; */
+    /* width: 100%; */
+     /* font-family: 'Permanent Marker', cursive; */
 }
 
 .background-shade {
     background-color: rgba(0, 0, 0, 0.7);
-    height: 500px;
+    height: 100%;
     width: 100%;
 }
 
 .background-shade h2 {
     color: beige;
     font-family: 'Permanent Marker', cursive;
+}
+
+.full-background {
+    background-image: url("../../images/blue-background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* opacity: 0.5; */
+    height: 100%;
+    /* width: 100%; */
+    background-color: rgba(0, 0, 0, 0.7);
 }
