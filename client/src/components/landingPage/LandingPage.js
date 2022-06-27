@@ -20,18 +20,15 @@ function LandingPage() {
                             <ZipLogo />
                         </Link>
                     </div>
-            <ZipHeader />
-                <div className='background-shade'>
-                    <h2>Sharks don't hunt in packs...but everyone notices when sharks gather.</h2>
-                </div>
+                        <ZipHeader />
+                
                     <About />
                     <Team />
                     <MintDetails />
                 </div>
             </div>
-
         </>
-        )
+    )
 }
 
 
