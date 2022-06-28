@@ -13,7 +13,7 @@ function Footer() {
         <>
             <div className="footer-div">
                 <h2 className="zip-footer-text">
-                    ZipSharks Brought to byD3f
+                    ZipSharks by D3f
                 </h2>
             
                 <a href="https://twitter.com/zipsharks">

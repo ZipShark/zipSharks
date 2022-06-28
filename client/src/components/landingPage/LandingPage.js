@@ -22,10 +22,8 @@ function LandingPage() {
                         </Link>
                     </div>
                         <ZipHeader />
-                
+                        <MintDetails />
                     <About />
-                    <Team />
-                    <MintDetails />
                     <Footer />
                 </div>
             </div>
