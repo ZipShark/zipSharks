@@ -1,6 +1,6 @@
 import React from "react";
 import "./ZipLogo.css";
-import pic from "../../images/logo-shark.png";
+import pic from "../../images/big-shark-logo.PNG";
 
 
 

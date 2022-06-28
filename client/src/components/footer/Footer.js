@@ -16,10 +16,10 @@ function Footer() {
                     ZipSharks Brought to byD3f
                 </h2>
             
-                <a href="">
+                <a href="https://twitter.com/zipsharks">
                     <FontAwesomeIcon className="twitter-icon" icon={faTwitter} fa-xl></FontAwesomeIcon>
                 </a>
-                <a href="">
+                <a href="https://discord.gg/VtXWEUSq">
                     <FontAwesomeIcon className="discord-icon" icon={faDiscord}></FontAwesomeIcon>
                 </a>
             </div>
