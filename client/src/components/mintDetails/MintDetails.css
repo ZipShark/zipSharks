@@ -4,3 +4,7 @@
     background-color: blue;
     border-radius: 3px ;
 }
+
+.mint-details {
+    background-color: rgba(0, 0, 0, 0.3);
+}

@@ -1,4 +1,5 @@
 import  React  from "react";
+import "./MintDetails.css";
 
 
 function MintDetails() {
@@ -31,11 +32,13 @@ function MintDetails() {
             <button className="connect-button" onClick={connectWallet}>Connect Wallet</button>
             <button className="mint-button" onClick={handleClick}>Mint</button>
 
-            <h2> Date: TBA</h2>
-            <h2> Supply: 5555</h2>
-            <h2> Allowlist price: 0.0222 ETH</h2>
-            <h2> Public Price: 0.0333 ETH</h2>
-
+            <div className="mint-details">
+                <h2> Date: TBA</h2>
+                <h2> Supply: 5555</h2>
+                <h2> Allowlist price: 0.0222 ETH</h2>
+                <h2> Public Price: 0.0333 ETH</h2>
+            </div>
+            
         
         </>
     )

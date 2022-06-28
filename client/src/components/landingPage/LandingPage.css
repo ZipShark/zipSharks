@@ -13,6 +13,7 @@
 
 .shark-background {
     display: flex;
+    align-items: center;
     flex-direction: column;
     /* background-image: url("../../images/blue-background.jpg");
     background-repeat: no-repeat;
