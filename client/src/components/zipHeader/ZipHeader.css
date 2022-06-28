@@ -17,3 +17,8 @@
     margin: 10px 0px;
     cursor: pointer;
 }
+
+.zip-button {
+    width: 170px;
+    height: 50px;
+}
