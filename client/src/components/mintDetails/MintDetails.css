@@ -1,10 +1,21 @@
 .connect-button {
+    font-family: 'Permanent Marker', cursive;
     height: 50px;
     width: 170px;
-    background-color: blue;
-    border-radius: 3px ;
+    background-color: #375f72;
+    border-radius: 15px ;
+}
+
+.mint-button {
+    font-family: 'Permanent Marker', cursive;
+    height: 50px;
+    width: 170px;
+    background-color: #375f72;
+    border-radius: 15px ;
+
 }
 
 .mint-details {
     background-color: rgba(0, 0, 0, 0.3);
+    /* filter: blur(1px); */
 }
