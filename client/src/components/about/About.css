@@ -2,10 +2,11 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    width: 342px;
+    /* width: 342px; */
 }
 
 .about-details {
+    margin-bottom: 20px;
     
     background-color: rgba(0, 0, 0, 0.3);
 }

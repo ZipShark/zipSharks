@@ -31,6 +31,14 @@
     /* filter: blur(1px); */
 }
 
+.mint-details {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /* background-color: aqua; */
+}
+
 .mint-buttons {
     display: flex;
     justify-content: space-between;
