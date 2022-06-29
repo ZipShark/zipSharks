@@ -10,10 +10,10 @@ function ZipHeader() {
             <div className="zip-header">
                 <h1>ZipSharks</h1>
             </div>
-            <button className="zip-button">Mint</button>
-        </>
-        )
-}
-
+            </>
+            )
+        }
+        
+        // <button className="zip-button">Mint</button>
 
 export default ZipHeader;

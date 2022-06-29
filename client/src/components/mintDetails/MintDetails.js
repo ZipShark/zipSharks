@@ -29,8 +29,10 @@ function MintDetails() {
 
     return(
         <>
-            <button className="connect-button" onClick={connectWallet}>Connect Wallet</button>
-            <button className="mint-button" onClick={handleClick}>Mint</button>
+            <div className="mint-buttons">
+                <button className="connect-button" onClick={connectWallet}>Connect Wallet</button>
+                <button className="mint-button" onClick={handleClick}>Mint</button>
+            </div>
 
             <div className="mint-details">
                 <h2> Date: TBA</h2>
