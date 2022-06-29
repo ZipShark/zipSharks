@@ -1,0 +1,45 @@
+/* * { */
+    /* background-color: #f8f8f8; */
+/* } */
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+.land-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* width: 100px; */
+    /* background-color: rebeccapurple; */
+}
+
+.shark-background {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    /* background-image: url("../../images/blue-background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; */
+    /* opacity: 0.5; */
+    /* height: 100%; */
+    /* width: 100%; */
+     font-family: 'Permanent Marker', cursive;
+}
+
+
+/* .background-shade h2 {
+    color: beige;
+    font-family: 'Permanent Marker', cursive;
+} */
+
+.full-background {
+    background-image: url("../../images/blue-background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.shark-background {
+    background-color: rgba(0, 0, 0, 0.3);
+    height: 100%;
+    width: 100%;
+}

@@ -1,22 +1,32 @@
-.App {
-  text-align: center;
+/* @import url('https://fonts.googleapis.com/css2?family=Calligraffitti&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Calligraffitti&family=Permanent+Marker&display=swap'); */
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
+/* body { */
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  /* margin: 10%; */
+  /* padding: 15%; */
+  /* background-color: black; */
+/* } */
+
+.app-home {
+  /* display: flex; */
+  /* align-items: center; */
+  /* font-family: 'Calligraffitti', cursive; */
+  /* font-family: 'Permanent Marker', cursive; */
+  /* height: 100px; */
+  /* width: 100%; */
+  /* color: beige; */
+  background-color: black;
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
-.App-link {
-  color: #09d3ac;
-}
+
+
