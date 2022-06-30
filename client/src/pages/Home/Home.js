@@ -4,7 +4,7 @@ import {GlobalStyle, HomeSection, NavBar} from '../../components';
 
 
 
-function Home() {
+function Home() {    
     return (
         <>
         <HomeContainer id='home'>

@@ -5,3 +5,4 @@ export {default as HomeTitle} from './MainTitle.png';
 export {default as MintInfo} from './MintInfo.png';
 export {default as HomeDiscordLogo} from './HomeDiscordLogo.png';
 export {default as HomeTwitterLogo} from './HomeTwitterLogo.png';
+export {default as CancelImage} from './cancel.png';

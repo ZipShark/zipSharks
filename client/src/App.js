@@ -15,7 +15,7 @@ function App() {
     <BrowserRouter>
       <GlobalStyle/>
       <Routes>
-          <Route path="/" element={<Landing/>} />
+          <Route path="/" element={<Landing/>}  />
           <Route path="/home" element={<Home/>} />
         </Routes>
     </BrowserRouter>
