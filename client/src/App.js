@@ -2,20 +2,23 @@ import React from "react";
 // import SimpleStorageContract from "./contracts/SimpleStorage.json";
 // import getWeb3 from "./getWeb3";
 
-import "./App.css";
-import Home from "./components/home/Home";
-import LandingPage from "./components/landingPage/LandingPage";
-import { Route, Routes } from "react-router-dom";
+import Home from "./pages/Home/Home.js";
+import Landing from "./pages/Landing/Landing.js";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import GlobalStyle from "./components/globalStyles.js";
 
 
 
 function App() {
   return (
     <>
+    <BrowserRouter>
+      <GlobalStyle/>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/landing" element={<LandingPage />} />
-      </Routes>
+          <Route path="/" element={<Landing/>} />
+          <Route path="/home" element={<Home/>} />
+        </Routes>
+    </BrowserRouter>
     </>
   )
 }
