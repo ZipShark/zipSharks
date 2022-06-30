@@ -19,7 +19,7 @@ export const HomeContainer = styled.div`
 
     @media screen and (max-width: 960px) {
         width: 100vw;
-        height: 200vh;
+        height: 100vh;
 
     }
 
@@ -40,8 +40,10 @@ export const HomeBanner = styled.img`
 
     @media screen and (max-width: 960px) {
         display: absolute;
-        width: 100vw;
+        width: 130vw;
         padding: 0;
+        margin-left: 50px ;
+        padding-top: 7rem ;
         border-radius: 0;
 
     }
@@ -64,7 +66,7 @@ export const HomeButton = styled.button`
         }
 
         @media screen and (max-width: 960px) {
-            height: 70px ;
+            height: 100px ;
             width: 70vw;
         }
 
@@ -75,6 +77,8 @@ export const ButtonImage = styled.img`
         display: block ;
         height: 150px ;
         width: 300px;
+        align-self: center ;
+        justify-content: center ;
 
         &:hover {
             height: 175px ;
@@ -82,7 +86,13 @@ export const ButtonImage = styled.img`
         }
 
     @media screen and (max-width: 960px) {
-            height: 70px ;
-            width: 70vw;
+            padding-right: 50px ;
+            height: 150px ;
+            width: 80vw;
+
+            &:hover {
+                height: 150px ;
+                width: 80vw ;
+            }
         }
 `

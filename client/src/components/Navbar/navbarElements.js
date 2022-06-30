@@ -12,6 +12,11 @@ width: 100vw;
 position: sticky;
 z-index : 999;
 
+
+    @media screen and (max-width: 960px) {
+        position: absolute ;
+        }
+
 `
 
 export const Links = styled.ul`
@@ -20,6 +25,13 @@ export const Links = styled.ul`
     display: flex ;
     flex-direction: row-reverse ;
     justify-content: space-around ;
+
+    
+    @media screen and (max-width: 960px) {
+            flex-direction: row ;
+            padding-left: 0 ;
+        }
+
 `
 
 export const SocialLink = styled.a`
