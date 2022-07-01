@@ -19,7 +19,7 @@ export const HomeContainer = styled.div`
 
     @media screen and (max-width: 960px) {
         width: 100vw;
-        height: 100vh;
+        height: 200vh;
         justify-content: space-evenly ;
 
     }
@@ -41,7 +41,7 @@ export const HomeBanner = styled.img`
 
     @media screen and (max-width: 960px) {
         display: absolute;
-        width: 130vw;
+        width: 100%;
         padding: 0;
         margin-left: 50px ;
         padding-top: 7rem ;
@@ -67,7 +67,7 @@ export const HomeButton = styled.button`
         }
 
         @media screen and (max-width: 960px) {
-            height: 100px ;
+            height: 150px ;
             width: 70vw;
         }
 
@@ -82,8 +82,8 @@ export const ButtonImage = styled.img`
         justify-content: center ;
 
         &:hover {
-            height: 175px ;
-            width: 330px ;
+            height: 150px ;
+            width: 80vw ;
         }
 
     @media screen and (max-width: 960px) {
