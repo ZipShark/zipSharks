@@ -83,7 +83,7 @@ export const ButtonImage = styled.img`
 
         &:hover {
             height: 150px ;
-            width: 80vw ;
+            width: 330px ;
         }
 
     @media screen and (max-width: 960px) {

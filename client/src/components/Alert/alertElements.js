@@ -5,7 +5,6 @@ export const AlertContainer = styled.div`
     z-index: 1000;
     position: fixed ;
     top: 15%;
-    width: 0 ;
     display: flex ;
     align-self: center;
     justify-content: space-evenly ;
@@ -15,6 +14,13 @@ export const AlertContainer = styled.div`
     flex-direction: column ;
     border-radius: 5rem;
     padding-bottom: 30px ;
+
+    @media screen and (max-width: 960px) {
+        top: 0 ;
+        border-radius: 0;
+        width: 100% ;
+        height: 100% ;
+    }
 ` 
 export const CancelButton = styled.img`
 
@@ -35,6 +41,10 @@ export const CancelButton = styled.img`
         color: gray ;
         cursor: pointer;
     }
+
+    @media screen and (max-width: 960px) {
+        margin-left: 0 ;
+    }
 `
 
 export const AlertBlurb = styled.div`
@@ -45,6 +55,10 @@ export const AlertBlurb = styled.div`
     align-self: center;
     justify-items: center ;
     text-align: center ;
+
+    @media screen and (max-width: 960px) {
+        flex-direction: column ;
+    }
 ` 
 
 export const AlertP = styled.p`
@@ -52,6 +66,10 @@ export const AlertP = styled.p`
     font-size: 1.5rem ;
     text-decoration: none ;
     text-align: center ;
+
+    @media screen and (max-width: 960px) {
+        font-size: 1rem ;
+    }
 `
 
 export const AlertLink = styled.a`
@@ -77,6 +95,7 @@ export const AlertLink = styled.a`
 
 
 export const AlertImage = styled.img`
+    display: block ;
     position: relative ;
     align-self: center;
     align-content: center ;
