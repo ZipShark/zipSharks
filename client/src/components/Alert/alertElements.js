@@ -91,6 +91,10 @@ export const AlertLink = styled.a`
     &:hover {
         cursor: pointer;
     }
+
+    @media screen and (max-width:960px) {
+        padding-left: 0px ;
+    }
 ` 
 
 
