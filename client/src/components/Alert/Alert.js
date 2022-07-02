@@ -15,7 +15,7 @@ function Alert(props) {
             <AlertP>
             Come swim with Sharks, Spread the <br/> Word of the Pack on Twitter!
             </AlertP>
-            <AlertLink href="https://twitter.com/intent/tweet?text=Join the pack and swim with @zipsharks. Get a bite out of the new site 🦈 https://www.zipsharks.com "> 
+            <AlertLink href="https://twitter.com/intent/tweet?text=Join the pack and swim with @zipsharks. Get a bite out of the new site 🦈 https://zipsharks.com "> 
                 <FiTwitter size={70}/>
             </AlertLink>
         </AlertBlurb>
