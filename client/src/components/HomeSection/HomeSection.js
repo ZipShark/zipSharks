@@ -15,7 +15,7 @@ function HomeSection() {
   return (
     <>
     {click && <Alert handleClick={handleClick}/>}
-    <HomeContainer style={{backgroundImage :`url(${Background})`}}>
+    <HomeContainer>
         <HomeBanner src={HomeTitle}/>
         <HomeButton onClick={handleClick}>
             <ButtonImage src={FeedButton} style={{aspectRatio : `initial`}}/>

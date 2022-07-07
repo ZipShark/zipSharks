@@ -1,8 +1,8 @@
-import React, {useState} from 'react'
-import { FiAnchor, FiTwitter } from 'react-icons/fi';
+import React from 'react';
+import { FiTwitter } from 'react-icons/fi';
 import { TbBrandDiscord } from 'react-icons/tb';
-import { CancelImage, MintInfo,  } from '../../images'
-import {AlertContainer, AlertBlurb, AlertP, AlertLink, AlertImage, CancelButton} from './alertElements.js';
+import { BaitImage, CancelImage, MintInfo,  } from '../../images'
+import {AlertContainer, AlertBlurb, AlertP, AlertLink, AlertImage, CancelButton, ChumImage} from './alertElements.js';
 
 function Alert(props) {
 
@@ -34,7 +34,7 @@ function Alert(props) {
                     Take the bait! Limited Allowlist left... 
             </AlertP>
             <AlertLink href='https://app.heymint.xyz/zipsharks'>
-                <FiAnchor size={70}/>
+                <ChumImage src={BaitImage}/>
             </AlertLink>
         </AlertBlurb>
     </AlertContainer>

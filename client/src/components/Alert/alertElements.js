@@ -111,10 +111,10 @@ export const ChumImage = styled.img`
     position: relative ;
     align-self: center;
     align-content: center ;
-    width: 230px ;
+    width: 100px ;
 
     &:hover {
-        width: 280px ;
+        width: 110px ;
     }
 `
 

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import {Background} from '../../images';
 
 export const HomeContainer = styled.div`
 
@@ -8,6 +9,7 @@ export const HomeContainer = styled.div`
     justify-content: space-around;
     align-content: center;
     background-position: center;
+    background-image: url(${Background});
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
@@ -15,10 +17,11 @@ export const HomeContainer = styled.div`
     align-items: center;
     z-index: auto;
     padding: 0;
+    margin: 0 ;
 
     @media screen and (max-width: 960px) {
-        width: 100vw;
-        height: 200vh;
+        width: 100%;
+        height: 100%;
         justify-content: space-evenly ;
 
     }
@@ -32,17 +35,17 @@ export const HomeBanner = styled.img`
     z-index: 555;
     border: 0;
     margin: 0;
-    margin-left: 100px ;
     padding: 0 ;
+    padding-left: 100px ;
     padding-bottom: 0 ;
     margin-bottom: none ;
     
 
     @media screen and (max-width: 960px) {
-        display: absolute;
+        display: block;
         width: 100%;
         padding: 0;
-        margin-left: 50px ;
+        padding-left: 50px ;
         padding-top: 7rem ;
         border-radius: 0;
 
