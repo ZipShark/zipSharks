@@ -10,7 +10,7 @@ export const AlertContainer = styled.div`
     justify-content: space-evenly ;
     align-items: center;;
     height: 73vh ;
-    width: 70vw ;
+    width: 80vw ;
     flex-direction: column ;
     border-radius: 5rem;
     padding-bottom: 30px ;
@@ -51,7 +51,7 @@ export const AlertBlurb = styled.div`
     display: flex ;
     flex-direction: row ;
     align-items: center ;
-    justify-content: space-evenly ;
+    justify-content: space-between ;
     align-self: center;
     justify-items: center ;
     text-align: center ;
@@ -88,8 +88,10 @@ export const AlertLink = styled.a`
     text-align: center ;
     justify-content: center;
     display: block;
+
     &:hover {
         cursor: pointer;
+        color: #6E90AE;
     }
 
     @media screen and (max-width:960px) {
@@ -97,12 +99,28 @@ export const AlertLink = styled.a`
     }
 ` 
 
+export const BaitLink = styled.a`
+    
+    text-decoration: none ;
+    border: none ;
 
-export const AlertImage = styled.img`
+`
+
+export const ChumImage = styled.img`
     display: block ;
     position: relative ;
     align-self: center;
     align-content: center ;
-    height: 230px ;
+    width: 230px ;
+
+    &:hover {
+        width: 280px ;
+    }
+`
+
+export const AlertImage = styled.img`
+    display: block ;
+    align-self: flex-start;
+    align-content: flex-start ;
     width: 230px ;
 `

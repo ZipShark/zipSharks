@@ -2,10 +2,9 @@ import styled from 'styled-components';
 
 export const HomeContainer = styled.div`
 
-    height: 100% ;
     top: 0;
-    width: 100vw;
-    height: 100vh ;
+    width: 100%;
+    height: 100% ;
     justify-content: space-around;
     align-content: center;
     background-position: center;
