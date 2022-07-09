@@ -21,7 +21,7 @@ export const HomeContainer = styled.div`
 
     @media screen and (max-width: 960px) {
         width: 100%;
-        height: 200vh;
+        height: 170%;
         justify-content: space-around ;
 
     }
@@ -126,6 +126,7 @@ export const ButtonImage = styled.img`
 
             &:hover {
                 cursor: pointer;
+                width: 60vw ;
             }
         }
 `
