@@ -29,14 +29,6 @@ function Alert(props) {
                 <TbBrandDiscord size={70}/>
             </AlertLink>
         </AlertBlurb>
-        <AlertBlurb>
-            <AlertP>
-                    Take the bait! Limited Allowlist left... 
-            </AlertP>
-            <AlertLink href='https://app.heymint.xyz/zipsharks'>
-                <ChumImage src={BaitImage}/>
-            </AlertLink>
-        </AlertBlurb>
     </AlertContainer>
     </>
   )

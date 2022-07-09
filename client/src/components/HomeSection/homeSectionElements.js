@@ -7,7 +7,7 @@ export const HomeContainer = styled.div`
     width: 100%;
     height: 100% ;
     justify-content: space-around;
-    align-content: center;
+    align-content: baseline;
     background-position: center;
     background-image: url(${Background});
     background-repeat: no-repeat;
@@ -21,8 +21,8 @@ export const HomeContainer = styled.div`
 
     @media screen and (max-width: 960px) {
         width: 100%;
-        height: 100%;
-        justify-content: space-evenly ;
+        height: 200vh;
+        justify-content: space-around ;
 
     }
 
@@ -31,7 +31,7 @@ export const HomeContainer = styled.div`
 export const HomeBanner = styled.img`
     
     display: block;
-    width: 60vw;
+    width: 55vw;
     z-index: 555;
     border: 0;
     margin: 0;
@@ -54,6 +54,37 @@ export const HomeBanner = styled.img`
 
 `
 
+export const HomeButtonContainer = styled.div`
+
+    display: flex ;
+    flex-direction: row ;
+    justify-content: space-around ;
+    align-items: baseline ;
+
+    @media screen and (max-width: 960px) {
+        flex-direction: column ;
+        align-items: center ;
+        align-content: center ;
+    }
+`
+
+export const HomePhrase = styled.img`
+
+    display: flex ;
+    align-items: center ;
+    justify-content: center ;
+    padding: 0 ;
+    margin: 0 ;
+    border: none ;
+    width: 500px ;
+
+    @media screen and (max-width: 960px) {
+        width: 60vw ;
+    }
+
+`
+
+
 export const HomeButton = styled.button`
         color: transparent ;
         border: none;
@@ -63,13 +94,14 @@ export const HomeButton = styled.button`
         align-content: center ;
         align-self: center ;
         justify-content: center ;
+        padding: 1rem ;
+        padding-top: 0 ;
         justify-items: center ;
         &:hover {
             cursor: pointer;
         }
 
         @media screen and (max-width: 960px) {
-            height: 150px ;
             width: 70vw;
         }
 
@@ -78,24 +110,22 @@ export const HomeButton = styled.button`
 
 export const ButtonImage = styled.img`
         display: block ;
-        height: 150px ;
         width: 300px;
         align-self: center ;
         justify-content: center ;
+        align-content: center ;
 
         &:hover {
-            height: 150px ;
+            cursor: pointer;
             width: 330px ;
         }
 
     @media screen and (max-width: 960px) {
-            padding-right: 50px ;
-            height: 150px ;
-            width: 80vw;
+            padding: 30px ;
+            width: 60vw;
 
             &:hover {
-                height: 150px ;
-                width: 80vw ;
+                cursor: pointer;
             }
         }
 `
