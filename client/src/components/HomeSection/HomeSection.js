@@ -38,6 +38,7 @@ function HomeSection() {
             autoPlay={true}
             controls={false}
             loop={true}
+            volume={0.2}
             />
     </HomeContainer>
     </>
