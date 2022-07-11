@@ -11,7 +11,7 @@ const Navbar = () => {
           <SocialLink  href="https://twitter.com/zipsharks?s=11&t=TNBHC2R1kVyaHIFCYgNTLg">
             <FiTwitter size={70}/>
           </SocialLink>
-          <SocialLink href="https://discord.gg/69WMtXyd" >
+          <SocialLink href="https://discord.gg/a4uP2TQDVe" >
             <TbBrandDiscord size={70}/>
           </SocialLink>
         </Links>
