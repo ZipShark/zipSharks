@@ -1,7 +1,7 @@
 import React from 'react';
 import { FiTwitter } from 'react-icons/fi';
 import { TbBrandDiscord } from 'react-icons/tb';
-import { BaitImage, CancelImage, MintInfo,  } from '../../images'
+import { CancelImage  } from '../../images'
 import {AlertContainer, AlertBlurb, AlertP, AlertLink, AlertImage, CancelButton, ChumImage} from './alertElements.js';
 
 function Alert(props) {
@@ -17,9 +17,6 @@ function Alert(props) {
             <AlertLink href="https://twitter.com/intent/tweet?text=Join the pack and swim with @zipsharks. Get a bite out of the new site 🦈 https://zipsharks.com "> 
                 <FiTwitter size={70}/>
             </AlertLink>
-        </AlertBlurb>
-        <AlertBlurb>
-                <AlertImage src={MintInfo}/>
         </AlertBlurb>
         <AlertBlurb>
             <AlertP>
