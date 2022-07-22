@@ -21,14 +21,10 @@ function HomeSection() {
   return (
     <>
     {gameClick && <Game handleClick={handleGameClick}/>}
-    {feedClick && <Alert handleClick={handleFeedClick}/>}
     <HomeContainer>
         <HomeBanner src={HomeTitle}/>
         <HomePhrase src={HomeBlurbImage}/>
         <HomeButtonContainer>
-          <HomeButton onClick={handleFeedClick}>
-              <ButtonImage src={FeedButton} style={{aspectRatio : `initial`}}/>
-          </HomeButton>
           <HomeButton onClick={handleGameClick}>
               <ButtonImage src={AllowGameButton} style={{aspectRatio : `initial`}}/>
           </HomeButton>
