@@ -18,6 +18,5 @@ export const HomeContainer = styled.div`
 
     @media screen and (max-width: 960px) {
         width: 100%;
-        height: 170% ;
     }
 `
