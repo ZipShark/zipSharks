@@ -120,7 +120,7 @@ export const ChumImage = styled.img`
 
 export const AlertImage = styled.img`
     display: block ;
-    align-self: flex-start;
-    align-content: flex-start ;
-    width: 230px ;
+    align-self: center;
+    align-content: center ;
+    width: 300px ;
 `

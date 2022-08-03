@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import {Background} from '../../images';
 
@@ -84,7 +85,27 @@ export const HomePhrase = styled.img`
 
 `
 
+export const MintButton = styled(Link)`
+        color: transparent ;
+        border: none;
+        background-color: transparent ;
+        border-radius: none ;
+        align-items: center ;
+        align-content: center ;
+        align-self: center ;
+        justify-content: center ;
+        padding: 1rem ;
+        padding-top: 0 ;
+        justify-items: center ;
+        &:hover {
+            cursor: pointer;
+        }
 
+        @media screen and (max-width: 960px) {
+            width: 70vw;
+        }
+
+`
 export const HomeButton = styled.button`
         color: transparent ;
         border: none;

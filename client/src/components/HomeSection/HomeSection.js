@@ -1,32 +1,30 @@
 import React, {useState} from 'react';
-import {Alert, Game} from '../../components';
-import { Background, FeedButton, HomeTitle, AllowGameButton, HomeBlurbImage } from '../../images/index.js';
-import {HomeContainer, HomeBanner, HomeButton, ButtonImage, HomeButtonContainer , HomePhrase } from './homeSectionElements.js';
+import {Game, Alert} from '../../components';
+import { HomeTitle, AllowGameButton, HomeBlurbImage, MintButtonImage, FeedButton } from '../../images/index.js';
+import {HomeContainer, HomeBanner, HomeButton, ButtonImage, HomeButtonContainer , HomePhrase, MintButton } from './homeSectionElements.js';
 import {AudioTrack} from '../../audio';
 import ReactAudioPlayer from 'react-audio-player';
 
 function HomeSection() {
 
-    const [feedClick, setFeedClick] = useState(false);
-    const [gameClick, setGameClick] = useState(false);
+    const [alertClick, setAlertClick] = useState(false);
 
-    const handleFeedClick = () => {
-      setFeedClick(!feedClick);
-    }
-
-    const handleGameClick = () => {
-      setGameClick(!gameClick);
+    const handleAlertClick = () => {
+      setAlertClick(!alertClick);
     }
 
   return (
     <>
-    {gameClick && <Game handleClick={handleGameClick}/>}
+    {alertClick && <Alert handleClick={handleAlertClick}/>}
     <HomeContainer>
         <HomeBanner src={HomeTitle}/>
         <HomePhrase src={HomeBlurbImage}/>
         <HomeButtonContainer>
-          <HomeButton onClick={handleGameClick}>
-              <ButtonImage src={AllowGameButton} style={{aspectRatio : `initial`}}/>
+          {/* <MintButton to='/mint'>
+            <ButtonImage src={MintButtonImage} />
+          </MintButton> */}
+          <HomeButton onClick={handleAlertClick}>
+              <ButtonImage src={FeedButton} style={{aspectRatio : `initial`}}/>
           </HomeButton>
         </HomeButtonContainer>
         <ReactAudioPlayer

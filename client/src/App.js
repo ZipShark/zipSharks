@@ -4,6 +4,7 @@ import React from "react";
 
 import Home from "./pages/Home/Home.js";
 import Landing from "./pages/Landing/Landing.js";
+import Mint from "./pages/Mint/Mint.js";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import GlobalStyle from "./components/globalStyles.js";
 
@@ -17,6 +18,7 @@ function App() {
       <Routes>
           <Route path="/" element={<Landing/>}  />
           <Route path="/home" element={<Home/>} />
+          <Route path="/mint" element={<Mint/>} />
         </Routes>
     </BrowserRouter>
     </>
