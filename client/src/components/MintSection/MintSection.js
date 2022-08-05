@@ -26,7 +26,7 @@ function MintSection(props) {
         </Step>
         <ErrorP> {props.errorMessage} </ErrorP>
         <Step>
-          <PurchaseButton>
+          <PurchaseButton onClick={props.purchase}>
             <PurchaseButtonImage src={MintButtonImage}/>
           </PurchaseButton>
           <StepP>

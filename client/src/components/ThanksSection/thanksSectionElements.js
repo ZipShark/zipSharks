@@ -1,14 +1,14 @@
 import styled from "styled-components";
-import { Background } from "../../images";
+import { MintBackground } from "../../images";
 
 export const ThanksContainer = styled.div`
     top: 0;
-    width: 100%;
-    height: 100% ;
+    width: 100vw;
+    height: 100vh ;
     justify-content: space-around;
-    align-content: baseline;
+    align-content: center;
     background-position: center;
-    background-image: url(${Background});
+    background-image: url(${MintBackground});
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
@@ -20,7 +20,7 @@ export const ThanksContainer = styled.div`
 
     @media screen and (max-width: 960px) {
         width: 100%;
-        height: 170%;
+        height: 100vh;
         justify-content: space-around ;
 
     }
@@ -30,28 +30,29 @@ export const ThanksContainer = styled.div`
 
 export const Title = styled.h1`
     font-size: 40px ;
+    padding-top: 4rem ;
     text-align: center ;
-    color: black ;
+    color: whitesmoke ;
 `
 
 
 export const Blurb = styled.div`
     display: flex ;
     flex-direction: column ;
-    align-items: baseline ;
+    align-items: center ;
 `
 
 export const P = styled.p`
     font-size: 24px ;
     text-align: center ;
-    color: black ;
+    color: whitesmoke ;
 `
 export const SocialLink = styled.a`
     height: 80px;
     width: 70px;
     margin: 0 ;
     position: relative ;
-    color: black ;
+    color: whitesmoke ;
     align-items: center;
     align-content: center;
     justify-items: center ;
@@ -63,6 +64,6 @@ export const SocialLink = styled.a`
 
     &:hover {
         cursor: pointer;
-        color: whitesmoke;
+        color: black;
     }
 `

@@ -20,12 +20,9 @@ function HomeSection() {
         <HomeBanner src={HomeTitle}/>
         <HomePhrase src={HomeBlurbImage}/>
         <HomeButtonContainer>
-          {/* <MintButton to='/mint'>
+          <MintButton to='/mint'>
             <ButtonImage src={MintButtonImage} />
-          </MintButton> */}
-          <HomeButton onClick={handleAlertClick}>
-              <ButtonImage src={FeedButton} style={{aspectRatio : `initial`}}/>
-          </HomeButton>
+          </MintButton>
         </HomeButtonContainer>
         <ReactAudioPlayer
             src={AudioTrack}
