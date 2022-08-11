@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {Game, Alert} from '../../components';
-import { HomeTitle, AllowGameButton, HomeBlurbImage, MintButtonImage, FeedButton } from '../../images/index.js';
-import {HomeContainer, HomeBanner, HomeButton, ButtonImage, HomeButtonContainer , HomePhrase, MintButton } from './homeSectionElements.js';
+import { HomeTitle, ClaimButtonImage, HomeBlurbImage, MintButtonImage, FeedButton } from '../../images/index.js';
+import {HomeContainer, ApparrelButton, HomeBanner, HomeButton, ButtonImage, HomeButtonContainer , HomePhrase, MintButton } from './homeSectionElements.js';
 import {AudioTrack} from '../../audio';
 import ReactAudioPlayer from 'react-audio-player';
 
@@ -23,6 +23,9 @@ function HomeSection() {
           <MintButton to='/mint'>
             <ButtonImage src={MintButtonImage} />
           </MintButton>
+          <ApparrelButton href="https://zipsharksapparel.myshopify.com">
+          <ButtonImage src={ClaimButtonImage}/>
+        </ApparrelButton>
         </HomeButtonContainer>
         <ReactAudioPlayer
             src={AudioTrack}

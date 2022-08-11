@@ -8,7 +8,7 @@ export const HomeContainer = styled.div`
     width: 100%;
     height: 100% ;
     justify-content: space-around;
-    align-content: baseline;
+    align-content: center;
     background-position: center;
     background-image: url(${Background});
     background-repeat: no-repeat;
@@ -23,12 +23,18 @@ export const HomeContainer = styled.div`
     @media screen and (max-width: 960px) {
         width: 100%;
         height: 170%;
-        justify-content: space-around ;
 
     }
 
 `
 
+export const ApparrelButton = styled.a`
+
+    display: flex ;
+    padding: 1rem ;
+    padding-top: 0 ;
+
+`
 export const HomeBanner = styled.img`
     
     display: block;
@@ -60,7 +66,7 @@ export const HomeButtonContainer = styled.div`
     display: flex ;
     flex-direction: row ;
     justify-content: space-around ;
-    align-items: baseline ;
+    align-items: center ;
 
     @media screen and (max-width: 960px) {
         flex-direction: column ;
