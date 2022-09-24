@@ -14,7 +14,7 @@ z-index : 999;
 
 
     @media screen and (max-width: 960px) {
-        position: absolute ;
+        position: relative ;
         }
 
 `
@@ -24,12 +24,12 @@ export const Links = styled.ul`
     align-items: flex-start ;
     display: flex ;
     flex-direction: row-reverse ;
-    justify-content: space-around ;
+    justify-content: space-between ;
 
     
     @media screen and (max-width: 960px) {
             flex-direction: row ;
-            padding-left: 0 ;
+            padding: 0.5rem ;
         }
 
 `

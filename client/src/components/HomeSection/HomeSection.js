@@ -19,14 +19,8 @@ function HomeSection() {
     <HomeContainer>
         <HomeBanner src={HomeTitle}/>
         <HomePhrase src={HomeBlurbImage}/>
-        <HomeButtonContainer>
-          <MintButton to='/mint'>
-            <ButtonImage src={MintButtonImage} />
-          </MintButton>
-          <ApparrelButton href="https://zipsharksapparel.myshopify.com">
-          <ButtonImage src={ClaimButtonImage}/>
-        </ApparrelButton>
-        </HomeButtonContainer>
+        {/* <HomeButtonContainer>
+        </HomeButtonContainer> */}
         <ReactAudioPlayer
             src={AudioTrack}
             autoPlay={true}

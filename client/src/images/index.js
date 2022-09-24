@@ -17,3 +17,4 @@ export { default as MintButtonImage} from './MintButtonImage.png';
 export { default as ClaimButtonImage} from './claimImage.png';
 export { default as FishingLicense} from './fishingLicense.gif';
 export {default as ShirtImage} from './shirt.png';
+export {default as OpenSea} from './opensea.png';
