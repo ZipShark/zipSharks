@@ -20,11 +20,12 @@ z-index : 999;
 `
 
 export const Links = styled.ul`
-    padding-left: 80vw ;
+    padding-left: 70vw ;
     align-items: flex-start ;
     display: flex ;
     flex-direction: row-reverse ;
     justify-content: space-between ;
+    padding-right: 1rem ;
 
     
     @media screen and (max-width: 960px) {
