@@ -38,7 +38,7 @@ export const ApparrelButton = styled.a`
 export const HomeBanner = styled.img`
     
     display: block;
-    width: 55vw;
+    width: 50vw;
     z-index: 555;
     border: 0;
     margin: 0;
@@ -58,17 +58,43 @@ export const HomeBanner = styled.img`
 
     }
 
+`
+export const MenuButton = styled(Link)`
+
+    display: flex ;
+    border: none ;
+    background: none ;
+    font-size: xx-large ;
+    color: aliceblue ;
+    text-decoration: none ;
+
+
+    &:hover {
+            cursor: pointer;
+            color: black ;
+        }
 
 `
-
 export const HomeButtonContainer = styled.div`
 
     display: flex ;
-    flex-direction: row ;
+    position: absolute ;
+    flex-direction: column ;
     justify-content: space-around ;
     align-items: center ;
+    right: 2rem ;
+    bottom: 4rem;
 
     @media screen and (max-width: 960px) {
+        width: 60vw ;
+        position: relative ;
+        align-self: center ;
+        justify-content: center ;
+        right: auto;
+        bottom: auto;
+        padding: none ;
+        padding-top: 2rem ;
+        text-align: center ;
         flex-direction: column ;
         align-items: center ;
         align-content: center ;
@@ -83,7 +109,7 @@ export const HomePhrase = styled.img`
     padding: 0 ;
     margin: 0 ;
     border: none ;
-    width: 500px ;
+    width: 850px ;
 
     @media screen and (max-width: 960px) {
         width: 60vw ;

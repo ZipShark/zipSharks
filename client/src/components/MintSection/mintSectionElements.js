@@ -51,7 +51,7 @@ padding-top: 10rem ;
 display: flex ;
 flex-direction: column ;
 justify-content: space-around ;
-align-items: center ;
+align-items: flex-start ;
 
 
 @media screen and (max-width: 960px) {
@@ -62,6 +62,7 @@ align-items: center ;
 
 export const Title = styled.img`
     width: 500px ;
+    position: absolute;
     justify-content: center ;
     align-content: center ;
     align-items: center ;
@@ -70,16 +71,21 @@ export const Title = styled.img`
     display: flex ;
     flex-direction: column ;
     padding-bottom: 0 ;
+    top: 0;
+    left: 0;
 
     @media screen and (max-width: 960px) {
         width: 80vw ;
+        position: relative ;
+        top: auto;
+        left: auto;
     }
 
 ` 
 
 export const SubHeading = styled.h3`
     font-size: 24px ;
-    text-align: center ;
+    text-align: flex-start ;
     color: aliceblue ;
 
     @media screen and (max-width: 960px) {

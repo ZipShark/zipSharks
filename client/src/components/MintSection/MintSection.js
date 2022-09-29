@@ -12,7 +12,7 @@ function MintSection(props) {
       <Column>
         <Title src={MintNowImage}/>
         <SubHeading>
-         Access to the Zipsharks Creative lab, Apparel Drops <br/> & a Pass to Mint Zipsharks for Free. 
+          Description of ZIPSharks One or Two Sentences. 
         </SubHeading>
         <Step>
           <WalletButton onClick={props.connectWallet}>
@@ -20,15 +20,21 @@ function MintSection(props) {
           <ConnectWalletImage src={ConnectedMetaMask} /> : 
           <ConnectWalletImage src={MetaMaskLogo}/>}
           </WalletButton>
+          <WalletButton onClick={props.walletConnectClicked}>
+            <ConnectWalletImage src="https://raw.githubusercontent.com/WalletConnect/walletconnect-assets/master/Logo/Blue%20(Default)/Logo.svg"/>
+          </WalletButton>
           <StepP>
             {props.isConnected ? props.address : "1. Connect Wallet" }
           </StepP>
         </Step>
         <ErrorP> {props.errorMessage} </ErrorP>
         <Step>
+          {props.isConnected ? 
           <PurchaseButton onClick={props.purchase}>
             <PurchaseButtonImage src={MintButtonImage}/>
-          </PurchaseButton>
+          </PurchaseButton> 
+          : <br/>}
+
           <StepP>
             2. Purchase a Fishing License
           </StepP>

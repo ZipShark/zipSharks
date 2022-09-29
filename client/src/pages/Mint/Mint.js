@@ -3,6 +3,7 @@ import {MintSection, ThanksSection} from '../../components';
 import Web3 from 'web3';
 import {MerkleTree} from 'merkletreejs';
 import KECCAK256 from 'keccak256';
+import WalletConnectProvider from "@walletconnect/web3-provider";
 
 
 function Mint() {
@@ -13,8 +14,31 @@ const [errorMessage , setMessage] = useState("");
 const [isConnected , handleConnect] = useState(false);
 const [price , setPrice] = useState(0.03);
 const [transactionCompleted, setCompleted] = useState(false);
+const [ethProvider, setProvider] = useState(null);
 
-const web3 = new Web3(Web3.givenProvider);
+
+
+
+
+const walletConnectClicked = async () => {
+
+//  Create WalletConnect Provider
+const provider = new WalletConnectProvider({
+  infuraId: "9c8f52fe7a634e15a284108a62c3b1ec",
+});
+console.log("Provider connected...");
+//  Enable session (triggers QR Code modal)
+await provider.enable();
+console.log("Connected to Provider...");
+const web3 = new Web3(provider);
+console.log("Connected to web3...")
+const accounts = await web3.eth.getAccounts();
+setAddress(accounts[0]);
+console.log("Successfully retrieved account!")
+handleConnect(true);
+setProvider(provider);
+
+}
 
 const purchase = async () => {
 
@@ -127,7 +151,7 @@ const addresses = [
   const leaf = buf2hex(KECCAK256(address));
   let proof = tree.getProof(leaf).map(x => buf2hex(x.data));
 
-  
+  const web3 = new Web3(ethProvider);
   const contractAddress = "0xE7Ad8B249eB49fEd8cf2c129abD422d7c6D4425A";
   const contract = new web3.eth.Contract(abi , contractAddress);
 
@@ -165,6 +189,7 @@ const addresses = [
         window.ethereum.request({method: "eth_requestAccounts"})
         .then(results => {
           accountChangedHandler(results[0]);
+          setProvider(Web3.givenProvider);
         });
       } catch (error) {
         setMessage('Error connecting...');
@@ -177,7 +202,7 @@ const addresses = [
 
   return (
     <>
-    {transactionCompleted ?  <ThanksSection/> : <MintSection connectWallet={connectWallet} errorMessage={errorMessage} purchase={purchase} isConnected={isConnected} address={address}/> }
+    {transactionCompleted ?  <ThanksSection/> : <MintSection walletConnectClicked={walletConnectClicked} connectWallet={connectWallet} errorMessage={errorMessage} purchase={purchase} isConnected={isConnected} address={address}/> }
     </>
   )
 }
