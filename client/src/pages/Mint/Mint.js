@@ -15,19 +15,37 @@ const [isConnected , handleConnect] = useState(false);
 const [price , setPrice] = useState(0.03);
 const [transactionCompleted, setCompleted] = useState(false);
 const [ethProvider, setProvider] = useState(null);
+const [amount , setAmount]  = useState(1);
 
+const plusSetAmount = () => {
+    const newAmount = amount + 1;
+    if (newAmount < 20) {
+        setAmount(newAmount);
+    } else {
+        setMessage("Max mint is 20.");
+    }
+}
 
+const minusSetAmount = () => {
+    const newAmount = amount - 1;
+    if (newAmount > 0) {
+        setAmount(newAmount);
+    } else {
+        setMessage("Min mint is 1.");
+    }
+}
 
 
 
 const walletConnectClicked = async () => {
 
 //  Create WalletConnect Provider
+
+console.log("Provider connected...");
+//  Enable session (triggers QR Code modal)
 const provider = new WalletConnectProvider({
   infuraId: "9c8f52fe7a634e15a284108a62c3b1ec",
 });
-console.log("Provider connected...");
-//  Enable session (triggers QR Code modal)
 await provider.enable();
 console.log("Connected to Provider...");
 const web3 = new Web3(provider);
@@ -195,14 +213,25 @@ const addresses = [
         setMessage('Error connecting...');
       }
 
-    } else {
+    }
+    else {
       setMessage("Error.. Try installing Metamask...");
     }
   }
 
   return (
     <>
-    {transactionCompleted ?  <ThanksSection/> : <MintSection walletConnectClicked={walletConnectClicked} connectWallet={connectWallet} errorMessage={errorMessage} purchase={purchase} isConnected={isConnected} address={address}/> }
+    {transactionCompleted ?  <ThanksSection/> : 
+    <MintSection walletConnectClicked={walletConnectClicked} 
+    connectWallet={connectWallet} 
+    errorMessage={errorMessage} 
+    purchase={purchase} 
+    isConnected={isConnected} 
+    address={address}
+    amount={amount}
+    plusSetAmount={plusSetAmount}
+    minusSetAmount={minusSetAmount}
+    /> }
     </>
   )
 }
