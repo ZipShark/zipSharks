@@ -15,7 +15,7 @@ function MintSection(props) {
         <Title>Mint Now! </Title>
         <Video src={SharkTankVideo} autoPlay={true} loop={true}/>
         <SubHeading>
-        Zipsharks is an art focused community with shark mentality, Never looking down and always looking up and forward.  We use outlets in web3 and web2 to showcase our community and what they are creating and building. And support the pack
+        Zipsharks is an art focused community with shark mentality, Never looking down and always looking up and forward.  We use Web3 & Web2 outlets to showcase our community and their creations.
         </SubHeading>
       </Column>
       <Column style={{alignItems : "center"}}>
@@ -37,17 +37,20 @@ function MintSection(props) {
           </WalletButtonContainer>
         </Step>
         <ErrorP> {props.errorMessage} </ErrorP>
-        <Step style={{flexDirection : "row" , alignContent : 'center'}}>
-        <CounterButton onClick={props.minusSetAmount}>
-            <CounterButtonImage src={MinusImage}/>
-        </CounterButton>
-        <br/>
-        <StepP style={{textAlign : "center" , padding : "20px"}}>x{props.amount}</StepP>
-        <br/>
-        <CounterButton onClick={props.plusSetAmount}>
-            <CounterButtonImage src={PlusImage}/>
-        </CounterButton>
-        </Step>
+        {props.isConnected ? 
+            <Step style={{flexDirection : "row" , alignContent : 'center'}}>
+            <CounterButton onClick={props.minusSetAmount}>
+                <CounterButtonImage src={MinusImage}/>
+            </CounterButton>
+            <br/>
+            <StepP style={{textAlign : "center" , padding : "20px"}}>x{props.amount}</StepP>
+            <br/>
+            <CounterButton onClick={props.plusSetAmount}>
+                <CounterButtonImage src={PlusImage}/>
+            </CounterButton>
+            </Step>
+            : <br/>
+            }
         <Step>
           {props.isConnected ? 
           <PurchaseButton onClick={props.purchase}>

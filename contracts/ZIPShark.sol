@@ -12,11 +12,18 @@ contract ZIPSharks is ERC721, Ownable {
     using Counters for Counters.Counter;
     using SafeMath for uint256;
 
+    //Team
+    address payable ktuck = payable(0xf21df340812629D44264474d478be0215Ea60eb6);
+    address payable samurai =
+        payable(0xf21df340812629D44264474d478be0215Ea60eb6);
+    address payable mufasa =
+        payable(0xf21df340812629D44264474d478be0215Ea60eb6);
+
     // Properties
     bool public publicSale;
-    uint256 public whitelistPrice = 0.0222 ether;
-    uint256 public mintPrice = 0.0333 ether;
-    uint16 public totalSupply = 5555;
+    uint256 public whitelistPrice = 0.02 ether;
+    uint256 public mintPrice = 0.03 ether;
+    uint16 public maxSupply = 2222;
     string public uri;
     // bytes32 public immutable root = *INSERT ROOT HERE*;
 
@@ -24,6 +31,7 @@ contract ZIPSharks is ERC721, Ownable {
 
     // Mappings
     mapping(address => bool) whitelistClaimed;
+    mapping(address => uint256) sharksMinted;
 
     constructor() ERC721("ZIPSharks", "ZIPS") {}
 
@@ -48,9 +56,15 @@ contract ZIPSharks is ERC721, Ownable {
             _amount = _amount.add(1);
         }
 
-        // Limits the TokenID
+        // Limits the number minted per wallet
         require(
-            (_tokenIdTracker.current().add(_amount)) <= totalSupply,
+            sharksMinted[msg.sender].add(_amount) <= 20,
+            "Max mint per wallet is 20. Try another wallet."
+        );
+
+        // Limits the TokenID to MaxSupply
+        require(
+            (_tokenIdTracker.current().add(_amount)) <= maxSupply,
             "Current Mint Limit Reached. Try minting less."
         );
 
@@ -59,10 +73,12 @@ contract ZIPSharks is ERC721, Ownable {
             // 1.Mints the NFT to the current tokenID
             // 2. Maps the current tokenChoice to the current URI
             // 3. Adds one to tokenIDtracker
-            super._mint(msg.sender, _tokenIdTracker.current());
             _tokenIdTracker.increment();
+            super._mint(msg.sender, _tokenIdTracker.current());
         }
 
+        // WhitelistClaim and MintNumber Recorded
+        sharksMinted[msg.sender] = sharksMinted[msg.sender] + _amount;
         whitelistClaimed[msg.sender] = true;
     }
 
@@ -81,9 +97,15 @@ contract ZIPSharks is ERC721, Ownable {
             _amount = _amount.add(1);
         }
 
+        // Limits the number minted per wallet
+        require(
+            sharksMinted[msg.sender].add(_amount) <= 20,
+            "Max mint per wallet is 20. Try another wallet."
+        );
+
         // Limits the TokenID
         require(
-            (_tokenIdTracker.current().add(_amount)) <= totalSupply,
+            (_tokenIdTracker.current().add(_amount)) <= maxSupply,
             "Current Mint Limit Reached. Try minting less."
         );
 
@@ -92,12 +114,28 @@ contract ZIPSharks is ERC721, Ownable {
             // 1.Mints the NFT to the current tokenID
             // 2. Maps the current tokenChoice to the current URI
             // 3. Adds one to tokenIDtracker
-            super._mint(msg.sender, _tokenIdTracker.current());
             _tokenIdTracker.increment();
+            super._mint(msg.sender, _tokenIdTracker.current());
         }
+
+        sharksMinted[msg.sender] = sharksMinted[msg.sender] + _amount;
     }
 
     // ADMIN Methods
+
+    // SharkDrop Method
+    function sharkDrop(address[] calldata _addresses, uint8 _x)
+        public
+        onlyOwner
+    {
+        for (uint256 counter = 0; counter < _addresses.length; counter++) {
+            for (uint256 n = 0; n < _x; n++) {
+                _tokenIdTracker.increment();
+                _mint(_addresses[counter], _tokenIdTracker.current());
+                sharksMinted[_addresses[counter]].add(1);
+            }
+        }
+    }
 
     // Switches sale to public
     function switchToPublic() public onlyOwner {
@@ -105,12 +143,21 @@ contract ZIPSharks is ERC721, Ownable {
         publicSale = !current;
     }
 
+    //Withdraw Method
+
+    function withdraw() public onlyOwner {}
+
+    // TotalSupply Method
+    function totalSupply() public view returns (uint256) {
+        return _tokenIdTracker.current();
+    }
+
     // URI methods
     function setBaseUri(string memory _uri) public onlyOwner {
         uri = _uri;
     }
 
-    // OVERRIDE
+    // OVERRIDE BaseURI Methods
     function _baseURI() internal view virtual override returns (string memory) {
         return uri;
     }

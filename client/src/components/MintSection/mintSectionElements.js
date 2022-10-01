@@ -14,6 +14,10 @@ export const CounterButton = styled.button`
         cursor: pointer;
         width : 70px
     }
+
+    @media screen and (max-width: 960px) {
+        width: 10vw ;
+    }
 `
 
 
@@ -21,6 +25,10 @@ export const CounterButtonImage = styled.img`
     display: flex ;
     width: 80px ;
     align-items: center ;
+
+    @media screen and (max-width:960px) {
+        /* width: 10%; */
+    }
 `
 export const MintContainer = styled.div`
     top: 0;
@@ -42,9 +50,11 @@ export const MintContainer = styled.div`
 
     @media screen and (max-width: 960px) {
         width: 100vw;
-        height: 100vh;
+        height: 250vh;
+        align-items: center ;
+        text-align: center ;
         justify-content: space-around ;
-        flex-direction: column-reverse ;
+        flex-direction: column ;
 
     }
 
@@ -57,6 +67,10 @@ export const Video = styled.video`
     align-self: center ;
     border-radius: 3rem ;
 
+    @media screen and (max-width: 960px) {
+
+        width: 80vw ;
+    }
 `
 
 export const HomeLink = styled(Link)`
@@ -87,6 +101,7 @@ padding: 30px ;
 
 @media screen and (max-width: 960px) {
     padding-top:  0;
+    align-items: center ;
     justify-content: space-between ;
 }
 ` 
@@ -127,6 +142,7 @@ export const SubHeading = styled.h3`
 
     @media screen and (max-width: 960px) {
     font-size:  16px;
+    width: 80vw ;
 }
 ` 
 
@@ -134,6 +150,8 @@ export const Step = styled.div`
     display : flex;
     flex-direction: column ;
     align-items: center ;
+    justify-content: space-between ;
+    
 `
 export const StepP = styled.p`
     font-size: large ;
@@ -142,6 +160,10 @@ export const StepP = styled.p`
     white-space: nowrap ;
     overflow: hidden ;
     text-overflow: ellipsis ;
+
+    @media screen and (max-width: 960px) {
+        max-width: 80vw;
+    }
 
 `
 export const ErrorP = styled.p`
@@ -258,7 +280,7 @@ export const ConnectWalletImage = styled.img`
 
     @media screen and (max-width: 960px) {
             padding: 30px ;
-            width: 30vw;
+            width: 50vw;
 
             &:hover {
                 cursor: pointer;
