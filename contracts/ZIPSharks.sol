@@ -18,11 +18,9 @@ contract ZIPSharks is ERC721, Ownable {
     //Team
     address payable kTuck = payable(0xe40c8deA5EdAB02C3B778605cf7b9dD1301062d0);
     address payable samurai =
-        payable(0x7f4EA72AFcCBa8401424A65Dfc9DB4d3701Be536);
+        payable(0xac4Bc126Ea4D2a1e2bE965f0811c3c51E1817F91);
     address payable mufasa =
         payable(0xf21df340812629D44264474d478be0215Ea60eb6);
-    address payable community =
-        payable(0x16232b3986724053193173305c63c66A8657664A);
 
     // Properties
     bool public publicSale;
@@ -52,7 +50,7 @@ contract ZIPSharks is ERC721, Ownable {
         whitelistConfig
     {
         require(
-            msg.value.mod(mintPrice) == 0,
+            msg.value.mod(whitelistPrice) == 0,
             "Please mint through the website."
         );
 
@@ -169,10 +167,9 @@ contract ZIPSharks is ERC721, Ownable {
     function withdraw() public onlyOwner {
         uint256 _balance = address(this).balance;
         uint256 _balanceDiv = _balance.div(100);
-        community.transfer(_balanceDiv.mul(10));
         kTuck.transfer(_balanceDiv.mul(4));
         mufasa.transfer(_balanceDiv.mul(11));
-        samurai.transfer(_balanceDiv.mul(75));
+        samurai.transfer(_balanceDiv.mul(85));
     }
 
     // TotalSupply Method
