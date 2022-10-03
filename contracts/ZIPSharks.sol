@@ -28,7 +28,10 @@ contract ZIPSharks is ERC721, Ownable {
     uint256 public mintPrice = 0.03 ether;
     uint16 public maxSupply = 2222;
     string public uri;
+    string public pUri;
+
     bytes32 public root;
+    bool public revealed;
 
     Counters.Counter private _tokenIdTracker;
 
@@ -156,6 +159,12 @@ contract ZIPSharks is ERC721, Ownable {
         }
     }
 
+    // Reveals Sharks
+    function sharkReveal() public onlyOwner {
+        bool current = revealed;
+        revealed = !current;
+    }
+
     // Switches sale to public
     function switchToPublic() public onlyOwner {
         bool current = publicSale;
@@ -163,7 +172,6 @@ contract ZIPSharks is ERC721, Ownable {
     }
 
     //Withdraw Method
-
     function withdraw() public onlyOwner {
         uint256 _balance = address(this).balance;
         uint256 _balanceDiv = _balance.div(100);
@@ -191,8 +199,17 @@ contract ZIPSharks is ERC721, Ownable {
         override
         returns (string memory)
     {
-        return
-            string(abi.encodePacked(uri, Strings.toString(tokenId), ".json"));
+        if (revealed) {
+            return
+                string(
+                    abi.encodePacked(uri, Strings.toString(tokenId), ".json")
+                );
+        } else {
+            return
+                string(
+                    abi.encodePacked(pUri, Strings.toString(tokenId), ".json")
+                );
+        }
     }
 
     function setBaseUri(string memory _uri) public onlyOwner {
