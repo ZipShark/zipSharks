@@ -14,6 +14,7 @@ export { default as MetaMaskLogo} from './MetamaskLogo.png';
 export { default as ConnectedMetaMask} from './connectedMetamask.png';
 export { default as WalletConnectRemix} from './walletConnectRemix.png';
 export { default as MintButtonImage} from './mintButtonImage.png';
+export { default as RetryImage} from './retryImage.png';
 export { default as ClaimButtonImage} from './claimImage.png';
 export { default as FishingLicense} from './fishingLicense.gif';
 export {default as ShirtImage} from './shirt.png';

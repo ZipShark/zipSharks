@@ -10,6 +10,7 @@ export const HomeContainer = styled.div`
     justify-content: space-around;
     align-content: center;
     background-position: center;
+    image-rendering: auto;
     background-image: url(${Background});
     background-repeat: no-repeat;
     background-size: cover;
@@ -65,13 +66,14 @@ export const MenuButton = styled(Link)`
     border: none ;
     background: none ;
     font-size: xx-large ;
-    color: aliceblue ;
+    color: black ;
     text-decoration: none ;
+    text-shadow:  0 0 5px #fff, 0 0 10px #fff, 0 0 15px #c8dedc, 0 0 20px #a9dbd7 ;
 
 
     &:hover {
             cursor: pointer;
-            color: black ;
+            color: aliceblue ;
         }
 
 `

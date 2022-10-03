@@ -85,6 +85,9 @@ export const ZIPSLogo = styled.img`
     bottom: 30px;
     left: 30px ;
 
+    &:hover {
+        width: 99px ;
+    }
     @media screen and (max-width: 960px) {
         display: none ;
     }

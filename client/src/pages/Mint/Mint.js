@@ -5,6 +5,8 @@ import {MerkleTree} from 'merkletreejs';
 import KECCAK256 from 'keccak256';
 import WalletConnectProvider from "@walletconnect/web3-provider";
 import abi from './abi.json';
+import ReactAudioPlayer from 'react-audio-player';
+import { MintTrack } from '../../audio';
 
 
 function Mint() {
@@ -19,7 +21,7 @@ const [amount , setAmount]  = useState(1);
 
 const plusSetAmount = () => {
     const newAmount = amount + 1;
-    if (newAmount < 20) {
+    if (newAmount <= 20) {
         setAmount(newAmount);
     } else {
         setMessage("Max mint is 20.");
@@ -162,13 +164,14 @@ const addresses = [
     '0x6436839075fE1fa2022729E6B9b32C214F3E83c5',
     '0x1236E0FfE9cf70Edd7c80bdb1676BdD0Ad1df0F8',
 ];
-
+  // Generates Merkle Proof
   const leaves = addresses.map(x => KECCAK256(x));
   const tree = new MerkleTree(leaves, KECCAK256, { sortPairs: true });
   const buf2hex = x => '0x' + x.toString('hex');
   const leaf = buf2hex(KECCAK256(address));
   let proof = tree.getProof(leaf).map(x => buf2hex(x.data));
 
+  // Retrieves Contract
   const web3 = new Web3(ethProvider);
   const contractAddress = "0xE7Ad8B249eB49fEd8cf2c129abD422d7c6D4425A";
   const contract = new web3.eth.Contract(abi , contractAddress);
@@ -177,7 +180,7 @@ const addresses = [
     await contract.methods
     .mint(proof)
     .send({from: address , 
-      value : web3.utils.toWei(String(price), 
+      value : web3.utils.toWei(String(price*amount), 
       "ether") });
     setCompleted(true);
   } catch (error) {
@@ -236,6 +239,13 @@ const addresses = [
     plusSetAmount={plusSetAmount}
     minusSetAmount={minusSetAmount}
     /> }
+    <ReactAudioPlayer
+    src={MintTrack}
+    autoPlay={true}
+    controls={false}
+    loop={true}
+    volume={0.2}
+    />
     </>
   )
 }

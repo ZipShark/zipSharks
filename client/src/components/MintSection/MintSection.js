@@ -1,9 +1,8 @@
-import React from 'react'
-import {MetaMaskLogo , BaitImage, SharkTankVideo, MintButtonImage, ConnectedMetaMask, WalletConnectRemix, PlusImage, MinusImage} from '../../images';
+import React, {useState} from 'react'
+import {MetaMaskLogo , RetryImage, BaitImage, SharkTankVideo, MintButtonImage, ConnectedMetaMask, WalletConnectRemix, PlusImage, MinusImage} from '../../images';
 import {CounterButton, CounterButtonImage, MintContainer, Image, WalletButtonContainer, Column, HomeLink, Title, SubHeading, Step, StepP, PurchaseButton, PurchaseButtonImage, WalletButton , ConnectWalletImage, ZIPSLogo , ErrorP, Video} from './mintSectionElements';
 
 function MintSection(props) {
-
   
   return (
     <>
@@ -19,7 +18,7 @@ function MintSection(props) {
         </SubHeading>
       </Column>
       <Column style={{alignItems : "center"}}>
-        <Step>
+        <Step style={{alignContent : "center"}}>
         <StepP>
             {props.isConnected ? props.address : "1. Connect Wallet" }
           </StepP>
@@ -38,7 +37,7 @@ function MintSection(props) {
         </Step>
         <ErrorP> {props.errorMessage} </ErrorP>
         {props.isConnected ? 
-            <Step style={{flexDirection : "row" , alignContent : 'center'}}>
+            <Step style={{flexDirection : "row" , alignContent : 'center' , justifyContent : "space-evenly"}}>
             <CounterButton onClick={props.minusSetAmount}>
                 <CounterButtonImage src={MinusImage}/>
             </CounterButton>
@@ -53,14 +52,13 @@ function MintSection(props) {
             }
         <Step>
           {props.isConnected ? 
-          <PurchaseButton onClick={props.purchase}>
-            <PurchaseButtonImage src={MintButtonImage}/>
+          <PurchaseButton onClick={props.purchase}> 
+          {props.errorMessage !== "" ? 
+          <PurchaseButtonImage src={RetryImage}/> :
+          <PurchaseButtonImage src={MintButtonImage}/>
+          }
           </PurchaseButton> 
           : <br/>}
-
-          <StepP>
-            2. Mint ZIPShark
-          </StepP>
         </Step>
       </Column>
     </MintContainer>

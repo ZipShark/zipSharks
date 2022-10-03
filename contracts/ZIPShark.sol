@@ -6,18 +6,22 @@ import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/utils/Counters.sol";
 import "@openzeppelin/contracts/utils/math/SafeMath.sol";
+import "@openzeppelin/contracts/utils/Strings.sol";
 
 contract ZIPSharks is ERC721, Ownable {
     // Utils Used
     using Counters for Counters.Counter;
     using SafeMath for uint256;
+    using Strings for uint256;
 
     //Team
-    address payable ktuck = payable(0xf21df340812629D44264474d478be0215Ea60eb6);
+    address payable kTuck = payable(0xe40c8deA5EdAB02C3B778605cf7b9dD1301062d0);
     address payable samurai =
-        payable(0xf21df340812629D44264474d478be0215Ea60eb6);
+        payable(0x7f4EA72AFcCBa8401424A65Dfc9DB4d3701Be536);
     address payable mufasa =
         payable(0xf21df340812629D44264474d478be0215Ea60eb6);
+    address payable community =
+        payable(0x16232b3986724053193173305c63c66A8657664A);
 
     // Properties
     bool public publicSale;
@@ -25,7 +29,7 @@ contract ZIPSharks is ERC721, Ownable {
     uint256 public mintPrice = 0.03 ether;
     uint16 public maxSupply = 2222;
     string public uri;
-    // bytes32 public immutable root = *INSERT ROOT HERE*;
+    bytes32 public root;
 
     Counters.Counter private _tokenIdTracker;
 
@@ -33,12 +37,17 @@ contract ZIPSharks is ERC721, Ownable {
     mapping(address => bool) whitelistClaimed;
     mapping(address => uint256) sharksMinted;
 
-    constructor() ERC721("ZIPSharks", "ZIPS") {}
+    constructor() ERC721("ZIPSharks", "ZIPS") {
+        for (uint8 counter = 0; counter >= 50; counter++) {
+            _tokenIdTracker.increment();
+            _mint(community, _tokenIdTracker.current());
+        }
+    }
 
     // Modifiers
     modifier whitelistConfig() {
-        _;
         require(whitelistClaimed[msg.sender] != true);
+        _;
     }
 
     function whitelistMint() public payable whitelistConfig {
@@ -129,6 +138,7 @@ contract ZIPSharks is ERC721, Ownable {
         onlyOwner
     {
         for (uint256 counter = 0; counter < _addresses.length; counter++) {
+            // Mints x amount per wallet inputed
             for (uint256 n = 0; n < _x; n++) {
                 _tokenIdTracker.increment();
                 _mint(_addresses[counter], _tokenIdTracker.current());
@@ -145,14 +155,38 @@ contract ZIPSharks is ERC721, Ownable {
 
     //Withdraw Method
 
-    function withdraw() public onlyOwner {}
+    function withdraw() public onlyOwner {
+        uint256 _balance = address(this).balance;
+        uint256 _balanceDiv = _balance.div(100);
+        community.transfer(_balanceDiv.mul(10));
+        kTuck.transfer(_balanceDiv.mul(4));
+        mufasa.transfer(_balanceDiv.mul(11));
+        samurai.transfer(_balanceDiv.mul(75));
+    }
 
     // TotalSupply Method
     function totalSupply() public view returns (uint256) {
         return _tokenIdTracker.current();
     }
 
+    // Update Merkle Root
+    function updateRoot(bytes32 _x) public onlyOwner {
+        root = _x;
+    }
+
     // URI methods
+
+    function tokenURI(uint256 tokenId)
+        public
+        view
+        virtual
+        override
+        returns (string memory)
+    {
+        return
+            string(abi.encodePacked(uri, Strings.toString(tokenId), ".json"));
+    }
+
     function setBaseUri(string memory _uri) public onlyOwner {
         uri = _uri;
     }
