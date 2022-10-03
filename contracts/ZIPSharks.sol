@@ -7,6 +7,7 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/utils/Counters.sol";
 import "@openzeppelin/contracts/utils/math/SafeMath.sol";
 import "@openzeppelin/contracts/utils/Strings.sol";
+import "@openzeppelin/contracts/utils/cryptography/MerkleProof.sol";
 
 contract ZIPSharks is ERC721, Ownable {
     // Utils Used
@@ -37,12 +38,7 @@ contract ZIPSharks is ERC721, Ownable {
     mapping(address => bool) whitelistClaimed;
     mapping(address => uint256) sharksMinted;
 
-    constructor() ERC721("ZIPSharks", "ZIPS") {
-        for (uint8 counter = 0; counter >= 50; counter++) {
-            _tokenIdTracker.increment();
-            _mint(community, _tokenIdTracker.current());
-        }
-    }
+    constructor() ERC721("ZIPSharks", "ZIPS") {}
 
     // Modifiers
     modifier whitelistConfig() {
@@ -50,10 +46,25 @@ contract ZIPSharks is ERC721, Ownable {
         _;
     }
 
-    function whitelistMint() public payable whitelistConfig {
+    function whitelistMint(bytes32[] calldata _proof)
+        public
+        payable
+        whitelistConfig
+    {
         require(
             msg.value.mod(mintPrice) == 0,
             "Please mint through the website."
+        );
+
+        require(
+            (
+                MerkleProof.verify(
+                    _proof,
+                    root,
+                    keccak256(abi.encodePacked(msg.sender))
+                )
+            ),
+            "This wallet is not registered. Try again with another wallet."
         );
 
         uint256 _amount = 0;
