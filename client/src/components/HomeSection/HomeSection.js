@@ -20,7 +20,7 @@ function HomeSection() {
         <HomeBanner src={HomeTitle}/>
         <HomePhrase src={HomeBlurbImage}/>
         <HomeButtonContainer>
-          <MenuButton to='/mint'> ZIPSharks </MenuButton>
+          {/* <MenuButton to='/mint'> ZIPSharks </MenuButton> */}
         </HomeButtonContainer>
         <ReactAudioPlayer
             src={AudioTrack}
