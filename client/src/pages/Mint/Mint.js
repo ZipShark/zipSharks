@@ -16,7 +16,7 @@ function Mint() {
 const [address ,setAddress] = useState("");
 const [errorMessage , setMessage] = useState("");
 const [isConnected , handleConnect] = useState(false);
-const [price , setPrice] = useState(0.03);
+const [price , setPrice] = useState(0.02);
 const [transactionCompleted, setCompleted] = useState(false);
 const [ethProvider, setProvider] = useState(null);
 const [amount , setAmount]  = useState(1);
@@ -74,7 +74,7 @@ const purchase = async () => {
 
   // Retrieves Contract
   const web3 = new Web3(ethProvider);
-  const contractAddress = "0x1DE3d1e83e3E7972CCc48510B9C4B670CF86C3a0";
+  const contractAddress = "0xE7Ad8B249eB49fEd8cf2c129abD422d7c6D4425A";
   const contract = new web3.eth.Contract(abi , contractAddress);
 
   try {

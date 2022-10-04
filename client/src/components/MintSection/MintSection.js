@@ -37,7 +37,7 @@ function MintSection(props) {
         </Step>
         <ErrorP> {props.errorMessage} </ErrorP>
         {props.isConnected ? 
-            <Step style={{flexDirection : "row" , alignContent : 'center' , justifyContent : "space-evenly"}}>
+            <Step style={{alignContent : 'center' , justifyContent : "space-evenly"}}>
             <CounterButton onClick={props.minusSetAmount}>
                 <CounterButtonImage src={MinusImage}/>
             </CounterButton>

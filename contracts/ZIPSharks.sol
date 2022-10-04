@@ -53,11 +53,6 @@ contract ZIPSharks is ERC721, Ownable {
         whitelistConfig
     {
         require(
-            msg.value.mod(whitelistPrice) == 0,
-            "Please mint through the website."
-        );
-
-        require(
             (
                 MerkleProof.verify(
                     _proof,
@@ -95,7 +90,7 @@ contract ZIPSharks is ERC721, Ownable {
             // 2. Maps the current tokenChoice to the current URI
             // 3. Adds one to tokenIDtracker
             _tokenIdTracker.increment();
-            super._mint(msg.sender, _tokenIdTracker.current());
+            _mint(msg.sender, _tokenIdTracker.current());
         }
 
         // WhitelistClaim and MintNumber Recorded
@@ -136,7 +131,7 @@ contract ZIPSharks is ERC721, Ownable {
             // 2. Maps the current tokenChoice to the current URI
             // 3. Adds one to tokenIDtracker
             _tokenIdTracker.increment();
-            super._mint(msg.sender, _tokenIdTracker.current());
+            _mint(msg.sender, _tokenIdTracker.current());
         }
 
         sharksMinted[msg.sender] = sharksMinted[msg.sender] + _amount;
@@ -214,6 +209,10 @@ contract ZIPSharks is ERC721, Ownable {
 
     function setBaseUri(string memory _uri) public onlyOwner {
         uri = _uri;
+    }
+
+    function setPreReveal(string memory _uri) public onlyOwner {
+        pUri = _uri;
     }
 
     // OVERRIDE BaseURI Methods

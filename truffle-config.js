@@ -80,6 +80,13 @@
        timeoutBlocks: 2000,
        skipDryRun: false
        },
+
+       goerli: {
+        provider: () => new HDWalletProvider(mnemonic, `https://goerli.infura.io/v3/${ropsten_key}`),
+        network_id: 5,       // Mainnet's id
+        timeoutBlocks: 2000,
+        skipDryRun: false
+        },
  
      rinkeby: {
        provider: () => new HDWalletProvider(mnemonic, `https://rinkeby.infura.io/v3/${ropsten_key}`),
