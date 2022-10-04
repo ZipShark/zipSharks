@@ -25,6 +25,7 @@ export const Links = styled.ul`
     display: flex ;
     flex-direction: row-reverse ;
     justify-content: space-between ;
+    
     padding-right: 1rem ;
 
     
@@ -42,13 +43,14 @@ export const SocialLink = styled.a`
     width: 70px;
     padding-top: 50px;
     margin: 0 ;
-    color: black ;
+    color: whitesmoke ;
     align-items: center;
     align-content: center;
     justify-content: center;
     display: block;
+
     &:hover {
-        color: whitesmoke;
+        color: black;
         cursor: pointer;
     }
 

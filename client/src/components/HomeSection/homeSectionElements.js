@@ -10,6 +10,7 @@ export const HomeContainer = styled.div`
     justify-content: space-around;
     align-content: center;
     background-position: center;
+    image-rendering: auto;
     background-image: url(${Background});
     background-repeat: no-repeat;
     background-size: cover;
@@ -38,7 +39,7 @@ export const ApparrelButton = styled.a`
 export const HomeBanner = styled.img`
     
     display: block;
-    width: 55vw;
+    width: 50vw;
     z-index: 555;
     border: 0;
     margin: 0;
@@ -58,17 +59,44 @@ export const HomeBanner = styled.img`
 
     }
 
+`
+export const MenuButton = styled(Link)`
+
+    display: flex ;
+    border: none ;
+    background: none ;
+    font-size: xx-large ;
+    color: black ;
+    text-decoration: none ;
+    text-shadow:  0 0 5px #fff, 0 0 10px #fff, 0 0 15px #c8dedc, 0 0 20px #a9dbd7 ;
+
+
+    &:hover {
+            cursor: pointer;
+            color: aliceblue ;
+        }
 
 `
-
 export const HomeButtonContainer = styled.div`
 
     display: flex ;
-    flex-direction: row ;
+    position: absolute ;
+    flex-direction: column ;
     justify-content: space-around ;
     align-items: center ;
+    right: 2rem ;
+    bottom: 4rem;
 
     @media screen and (max-width: 960px) {
+        width: 60vw ;
+        position: relative ;
+        align-self: center ;
+        justify-content: center ;
+        right: auto;
+        bottom: auto;
+        padding: none ;
+        padding-top: 2rem ;
+        text-align: center ;
         flex-direction: column ;
         align-items: center ;
         align-content: center ;
@@ -83,7 +111,7 @@ export const HomePhrase = styled.img`
     padding: 0 ;
     margin: 0 ;
     border: none ;
-    width: 500px ;
+    width: 850px ;
 
     @media screen and (max-width: 960px) {
         width: 60vw ;

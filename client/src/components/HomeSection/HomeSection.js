@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {Game, Alert} from '../../components';
 import { HomeTitle, ClaimButtonImage, HomeBlurbImage, MintButtonImage, FeedButton } from '../../images/index.js';
-import {HomeContainer, ApparrelButton, HomeBanner, HomeButton, ButtonImage, HomeButtonContainer , HomePhrase, MintButton } from './homeSectionElements.js';
+import {HomeContainer, ApparrelButton, HomeBanner, HomeButton, ButtonImage, HomeButtonContainer , HomePhrase, MintButton, MenuButton } from './homeSectionElements.js';
 import {AudioTrack} from '../../audio';
 import ReactAudioPlayer from 'react-audio-player';
 
@@ -19,8 +19,9 @@ function HomeSection() {
     <HomeContainer>
         <HomeBanner src={HomeTitle}/>
         <HomePhrase src={HomeBlurbImage}/>
-        {/* <HomeButtonContainer>
-        </HomeButtonContainer> */}
+        <HomeButtonContainer>
+          <MenuButton to='/mint'> ZIPSharks </MenuButton>
+        </HomeButtonContainer>
         <ReactAudioPlayer
             src={AudioTrack}
             autoPlay={true}
