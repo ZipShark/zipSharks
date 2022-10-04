@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import {MetaMaskLogo , RetryImage, BaitImage, SharkTankVideo, MintButtonImage, ConnectedMetaMask, WalletConnectRemix, PlusImage, MinusImage} from '../../images';
+import {MetaMaskLogo , RetryImage, BaitImage, SharkTankVideo, ConnectedMetaMask, WalletConnectRemix, PlusImage, MinusImage} from '../../images';
 import {CounterButton, CounterButtonImage, MintContainer, Image, WalletButtonContainer, Column, HomeLink, Title, SubHeading, Step, StepP, PurchaseButton, PurchaseButtonImage, WalletButton , ConnectWalletImage, ZIPSLogo , ErrorP, Video} from './mintSectionElements';
 
 function MintSection(props) {
@@ -55,7 +55,7 @@ function MintSection(props) {
           <PurchaseButton onClick={props.purchase}> 
           {props.errorMessage !== "" ? 
           <PurchaseButtonImage src={RetryImage}/> :
-          <PurchaseButtonImage src={MintButtonImage}/>
+          "Mint!"
           }
           </PurchaseButton> 
           : <br/>}
